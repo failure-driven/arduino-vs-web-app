@@ -20,8 +20,14 @@ How getting started with Arduino porjects match up with WebApps.
 
    ```
    setInterval(
-      () => document.body.bgColor = document.body.bgColor == "red" ? "" : "red",
-      1000)
+      () => document.bgColor = document.bgColor === "red" ? "" : "red" ,
+      1000
+   )
+
+   # and with the ability to stop
+
+   blink1000 = setInterval(() => document.bgColor = document.bgColor === "red" ? "" : "red" ,1000)
+   clearInterval(blink1000)
    ```
 
 1. EP XX - push button
